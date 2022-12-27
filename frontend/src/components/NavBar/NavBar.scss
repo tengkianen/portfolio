@@ -17,7 +17,7 @@
 .app__navbar-logo {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: left;
 
     img {
         width: 200px;
@@ -33,7 +33,7 @@
 .app__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 
     list-style: none;
@@ -54,7 +54,7 @@
         }
 
         a {
-            color: var(--gray-color);
+            color: var(--lightGray-color);
             text-decoration: none;
             flex-direction: column;
 
@@ -64,13 +64,13 @@
             transition: all 0.1s ease-in-out;
 
             &:hover {
-                color: var(--secondary-color);
+                color: var(--black-color);
             }
         }
 
         &:hover {
             div {
-                background: var(--secondary-color);
+                background: var(--background-color);
             }
         }
     }
@@ -89,12 +89,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--secondary-color);
+    background: var(--lightGray-color);
 
     svg {
         width: 70%;
         height: 70%;
-        color: var(--white-color);
+        color: var(--gray-color);
     }
 
     div {
@@ -114,8 +114,8 @@
         align-items: flex-end;
         flex-direction: column;
 
-        background: url('../../assets/bgWhite.png');
-        background-color: var(--white-color);
+        //background: url('../../assets/bgWhite.png');
+        background-color: var(--gray-color);
         background-size: cover;
         background-repeat: repeat;
 
@@ -124,7 +124,7 @@
         svg {
             width: 35px;
             height: 35px;
-            color: var(--secondary-color);
+            color: var(--lightGray-color);
             margin: 0.5rem 1rem;
         }
 
@@ -144,7 +144,7 @@
                 margin: 1rem;
 
                 a {
-                    color: var(--gray-color);
+                    color: var(--lightGray-color);
                     text-decoration: none;
                     font-size: 1rem;
                     text-transform: uppercase;
@@ -153,7 +153,7 @@
                     transition: all 0.1s ease-in-out;
 
                     &:hover {
-                        color: var(--secondary-color);
+                        color: var(--background-color);
                     }
                 }
             }

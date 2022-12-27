@@ -1,5 +1,5 @@
 .app {
-    background-color: var(--primary-color);
+    background: linear-gradient(#030303, #ffffff);
     font-family: var(--font-base);
   }
   
@@ -55,11 +55,11 @@
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    color: var(--black-color);
+    color: var(--white-color);
     text-transform: capitalize;
   
     span {
-      color: var(--secondary-color);
+      color: var(--black-color);
     }
   
     @media screen and (min-width: 2000px) {
@@ -74,8 +74,18 @@
   .p-text {
     font-size: 0.8rem;
     text-align: left;
-    color: var(--gray-color);
+    color: var(--lightGray-color);
     line-height: 1.5;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.75rem;
+    }
+  }
+  .about-p-text {
+    font-size: 0.8rem;
+    text-align: left;
+    color: var(--black-color);
+    line-height: 1.25;
   
     @media screen and (min-width: 2000px) {
       font-size: 1.75rem;
