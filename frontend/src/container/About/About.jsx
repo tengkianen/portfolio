@@ -3,14 +3,16 @@ import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import './About.scss';
-
-const abouts = [
-  { title: 'Frontend Development', description: 'Starting and Learning new designs everyday', imgUrl: images.about01},
-  { title: 'Machine Learning', description: 'Software AND Hardware implementations of ML', imgUrl: images.about02},
-  { title: 'Backend Development', description: 'Strong understanding in SDLC, Data Structures and OOP', imgUrl: images.about03}
-]
+import { urlFor, client } from '../../client';
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+    client.fetch(query)
+      .then((data) => setAbouts(data))
+  }, []);
+
   return (
     <>
     <h2 className = "head-text app__about" ><span>Simplicity </span> is the soul of <span>efficiency</span></h2>
@@ -24,7 +26,7 @@ const About = () => {
           className="app__profile-item"
           key={about.title + index}
         >
-            <img src={about.imgUrl} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className='bold-text' style={{ marginTop: 20}}>{about.title}</h2>
             <p className='about-p-text' style={{ marginTop: 10}}>{about.description}</p>
         </motion.div>
